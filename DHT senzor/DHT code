@@ -1,6 +1,6 @@
 #include "DHT.h"
 
-#define DHTPIN 19
+#define DHTPIN 23
 
 #define DHTTYPE DHT11
 //create an instance of DHT sensor
