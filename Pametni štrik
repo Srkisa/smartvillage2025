@@ -1,0 +1,24 @@
+#include <ESP32Servo.h>
+
+#define SERVO_PIN 26 // ESP32 pin GIOP26 connected to servo motor
+ 
+#define DO_PIN 21
+
+Servo servoMotor;
+
+void setup() {
+Serial.begin(115200)
+  servoMotor.attach(SERVO_PIN);  // attaches the servo on ESP32 pin
+pinMode(DO_PIN, INPUT);
+}
+
+void loop() {
+int rain_state = digitalRead(DO_PIN); 
+
+if (rain_state == LOW) {
+servoMotor.write(90);
+}
+else {
+servoMotor.write(0);
+}
+}
