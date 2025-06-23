@@ -19,7 +19,11 @@
 String LoRaData;
 
 void setup() { 
+
+   Serial.begin(115200);
   
+  Serial.println("LoRa Receiver Test");
+
   //SPI LoRa pins
   SPI.begin(SCK, MISO, MOSI, SS);
   //setup LoRa transceiver module
